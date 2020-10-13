@@ -1,0 +1,55 @@
+
+.select-block label,
+.input-block label,
+ .textarea-block label {
+    font-size: 1.4rem;
+    color: var(--color-text-complement);
+}
+ /*Alterações nos botões Matéria, dia da semana*/
+.input-block input,
+.select-block select,
+.textarea-block textarea {
+    width: 100%;
+    height: 5.6rem;
+    margin-top: 0.8rem;
+    border-radius: 0.8rem;
+    background: var(--color-input-background);
+    border: 0;
+    
+    outline: 0; /*tira a cor escura quando seleciona a opção com o mouse*/
+    padding: 0 1.6rem;
+    font: 1.6rem Archivo;
+}
+.textarea-block textarea {
+    padding: 1.2rem 1.6rem;
+    height: 16rem;
+
+    resize: vertical;
+}
+
+.input-block,
+.textarea-block {
+    position: relative; /*Deixa o item relativo para a linha ficar embaixo*/
+   
+}
+
+.input-block:focus-within::after,
+ .textarea-block:foccus-within::after {
+    /*Elemento em foco---After o CSS cria um elemento em HTML quando o objeto é selecionado*/
+    /*Cria uma  linha embaixo do item selecionado*/
+    content: "";
+    width: calc(100% - 3.2rem);
+    height: 2px;
+    background: var(--color-primary-light);
+    
+    position: absolute;
+    left: 1.6rem;
+    /*right: 1.6rem;*/
+    bottom: 2px;
+}
+
+label small{
+    font-size: 1.2rem;
+    padding-left: 1.2rem;
+    color: var(--color-small-info);
+}
